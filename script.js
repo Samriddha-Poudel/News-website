@@ -70,5 +70,13 @@ function onnavitemclick(id){
     currentSelectedNav.classList.add("active");
 
     
-    
 }
+const input=document.getElementById("searchtext");
+const searchbtn=document.getElementById("searchbtn");
+
+searchbtn.addEventListener('click',() =>{
+    const query=input.value;
+    if(!query) return;
+    fetchNews(query);
+
+})
