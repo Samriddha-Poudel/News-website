@@ -93,3 +93,36 @@ nav {
 .hoverlink:active{
     color:red;
 }
+
+
+.searchbar{
+    height:30px;
+    gap:8px;
+}
+
+
+.newsinput{
+    width:200px;
+    height:100%;
+    padding-inline:12px;
+    border-radius:4px;
+    border:2px solid #abc6dd;
+    font-family:"Roboto",sans-serif;
+}
+
+
+
+.searchbtn{
+    background-color:var(--accent-color);
+    color:#fff;
+    padding: 8px 24px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-family:"Roboto",sans-serif;
+}
+
+
+.searchbtn:hover{
+    background-color:var(--accent-color-dark);
+}
