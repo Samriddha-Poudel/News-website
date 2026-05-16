@@ -1,5 +1,5 @@
-const api_key = "969020697d6051ae61c9f961394984f1";
-const url="https://gnews.io/api/v4/search?q="
+const api_key = "4e0ed31d-6f95-46ae-b369-3b124776f934";
+const url="https://content.guardianapis.com/search?q="
 
 
 window.addEventListener('load', () => fetchNews("Nepal"))
@@ -7,10 +7,10 @@ window.addEventListener('load', () => fetchNews("Nepal"))
 async function fetchNews(query){
 
    
-        const response= await fetch(`${url}${query}&apikey=${api_key}&lang=en`)
+        const response = await fetch(`${url}${query}&api-key=${api_key}&show-fields=thumbnail,trailText,headline&page-size=20`)
     const data= await response.json();
     console.log(data);
-    bindData(data.articles);
+    bindData(data.response.results);
 
     }
 
@@ -23,7 +23,7 @@ async function fetchNews(query){
         cardsContainer.innerHTML="";
 
         articles.forEach(article => {
-            if(!article.image) return;
+            if(!article.fields?.thumbnail) return;
             const cardClone=newsTemplate.content.cloneNode(true);
             filldataInCard(cardClone,article);
             cardsContainer.appendChild(cardClone);
@@ -38,22 +38,22 @@ const newsSource=cardClone.querySelector("#news-source");
 const newsDesc=cardClone.querySelector("#news-decs");
 
 
-newsImg.src=article.image;
-newsTitle.innerHTML=article.title;
-newsDesc.innerHTML=article.description;
+newsImg.src=article.fields.thumbnail;
+newsTitle.innerHTML=article.fields.headline;
+newsDesc.innerHTML=article.fields.trailText;
 
 
 
 
-const date=new Date(article.publishedAt).toLocaleString("en-us",{
+const date=new Date(article.webPublicationDate).toLocaleString("en-us",{
     timezone:"Asia/Kathmandu"
 });
 
 
-newsSource.innerHTML=`${article.source.name}. ${date}`;
+newsSource.innerHTML=`The Guardian . ${date}`;
 
 cardClone.firstElementChild.addEventListener('click',() => {
-    window.open(article.url,"_blank");
+    window.open(article.webUrl,"_blank");
 });
 
 
