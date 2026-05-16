@@ -37,7 +37,10 @@ ul {
     list-style: none;
 }
 
-
+.companyLogo{
+    width:120px;
+    margin-right:40px;
+}
 
 
 .flex {
@@ -50,7 +53,7 @@ ul {
 .container {
     max-width: 1180px;
     margin-inline: auto;
-    overflow: hidden;
+
 }
 
 
@@ -66,17 +69,31 @@ nav {
 }
 
 
+.navitem.active{
+    color:#00B4D8;
+}
+
+
+
 .mainnav {
     justify-content: space-between;
     padding: 8px 0px;
+    
 }
 
-.companylogo img {
-    width: 120px;
+
+
+.navlinks{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
 }
+
 
 
 .navlinks ul{
+    display:flex;
     gap:15px;
 }
 
@@ -95,7 +112,12 @@ nav {
 }
 
 
+
+
+
+
 .searchbar{
+    margin-left:auto;
     height:30px;
     gap:8px;
 }
@@ -171,6 +193,6 @@ object-fit:cover;
     padding:15px;
 }
 
-.news source{
+.news-source{
    margin-block:12px; 
 }

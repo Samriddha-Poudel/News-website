@@ -10,13 +10,14 @@
 
 <nav>
 <div class="mainnav container flex">
-    <a href="" class="companylogo">
-        <img src="./assests/logo.png" alt="logo">
-    </a>
-    <div class="navlinks"><ul class="flex">
-        <li class=" hoverlink navitem">IPL</li>
-        <li class="hoverlink navitem">Finance</li>
-        <li class=" hoverlink navitem">politics</li>
+    
+    <a href="" class="brandname">Sam News</a>
+    <div class="navlinks"><ul class="flex"> 
+        <li class=" hoverlink navitem" id="ipl" onclick="onnavitemclick('ipl')">IPL</li>
+        <li class="hoverlink navitem" id="finance" onclick="onnavitemclick ('finance')">Finance</li>
+        <li class=" hoverlink navitem" id="politics" onclick="onnavitemclick('politics')">Politics</li>
+        <li class="hoverlink navitem" id="science"onclick="onnavitemclick('science')">Science</li>
+        <li class="hoverlink navitem" id="sports" onclick="onnavitemclick('sports')">Sports</li>
     </ul>
 </div>
 
@@ -39,8 +40,8 @@
                 <img src="https://via.placeholder.com/400*200" alt="news image" id="news-img">
             </div>
             <div class="card-cntn">
-                <h3 id="news title">This is the title </h3>
-                <h6 id="news source" class="news source">End Gadget 5/16/2026</h6>
+                <h3 id="news-title">This is the title </h3>
+                <h6 id="news-source" class="news source">End Gadget 5/16/2026</h6>
                 <p class="news-decs" id="news-decs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias commodi magni adipisci illo! Architecto nesciunt et quasi exercitationem commodi.</p>
             </div>
          </div>

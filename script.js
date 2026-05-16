@@ -34,7 +34,41 @@ async function fetchNews(query){
     function filldataInCard(cardClone,article){
         const newsImg= cardClone.querySelector("#news-img");
         const newsTitle=cardClone.querySelector("#news-title");
-const newsSource=cardClone.querySelector("#news-")
+const newsSource=cardClone.querySelector("#news-source");
+const newsDesc=cardClone.querySelector("#news-decs");
+
+
+newsImg.src=article.urlToImage;
+newsTitle.innerHTML=article.title;
+newsDesc.innerHTML=article.description;
+
+
+
+
+const date=new Date(article.publishedAt).toLocaleString("en-us",{
+    timezone:"Asia/Kathmandu"
+});
+
+
+newsSource.innerHTML=`${article.source.name}. ${date}`;
+
+cardClone.firstElementChild.addEventListener('click',() => {
+    window.open(article.url,"_blank");
+});
+
 
         
     }
+
+
+    let currentSelectedNav= null;
+function onnavitemclick(id){
+    fetchNews(id);
+    const navitem=document.getElementById(id);
+    currentSelectedNav?.classList.remove("active");
+    currentSelectedNav= navitem;
+    currentSelectedNav.classList.add("active");
+
+    
+    
+}
