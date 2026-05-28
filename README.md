@@ -8,5 +8,9 @@ API and displays the details, image and also redirect to its main source. News c
 - HTML:HTML is used in this projcet to make the structure of the page also to add html elements to give proper structure for the page .
 - CSS:CSS is used in this project to style the HTML elements make the web page interactive and good looking .
 - JS: JS is used in this project to the API and get the data.
-  ## How to use it
-  To use this web app , you just need a web browser then visit https://samriddhanews7.netlify.app/ ENJOY
+
+ ## How to use it
+ To use this web app , you just need a web browser then visit https://samriddha-poudel.github.io/News-website/  ENJOY
+
+ # Note:
+ This was mine starting project that i have deplyod my second project more specifically in beest i have deplyod all of mine project through netlify which i have sumbited and my free trail of netlify has been full of limit so my website is down in netlify so i have uploaded it from github pages so you can cehck it out from here .
